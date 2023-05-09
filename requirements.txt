@@ -3,3 +3,4 @@ streamlit_authenticator
 mysql-connector-python==8.0.32
 joblib
 imblearn
+streamlit_cookies_manager
