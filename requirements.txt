@@ -6,3 +6,9 @@ imblearn
 streamlit_cookies_manager
 mysqlclient==2.1.1
 SQLAlchemy==2.0.12
+plotly
+scipy
+pandas
+Flask
+flask-cors
+pyforest
