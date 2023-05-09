@@ -4,4 +4,3 @@ mysql-connector-python==8.0.33
 joblib
 imblearn
 streamlit_cookies_manager
-mysqlclient==2.1.1
