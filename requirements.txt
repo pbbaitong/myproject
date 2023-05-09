@@ -1,3 +1,11 @@
+streamlit_option_menu==0.3.2
+streamlit_authenticator==0.2.2
+mysql-connector-python==8.0.33
+joblib==1.2.0
+imblearn==0.0
+streamlit_cookies_manager==0.2.0
+mysqlclient==2.1.1
+SQLAlchemy==2.0.12
 plotly
 scipy
 pandas
