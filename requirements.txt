@@ -5,3 +5,4 @@ imblearn
 streamlit_cookies_manager
 mysqlclient
 SQLAlchemy
+mysql_config
