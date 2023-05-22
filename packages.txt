@@ -1,2 +1,2 @@
 python-dev
-libmysqlclient-dev
+default-libmysqlclient-dev
