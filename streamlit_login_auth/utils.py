@@ -4,7 +4,7 @@ import mysql.connector
 def init_connection():
     return mysql.connector.connect(**st.secrets["mysql"])
 # conn = init_connection()
-conn = st.experimental_connection('mysql', type='sql')
+conn = st.experimental_connection('db', type='sql')
 
 def register_new_usr(firstname_sign_up: str, lastname_sign_up: str, tel_sign_up: str, password_sign_up: str, role_sign_up) -> None:
     # Save the infoamation of the new user in the database
