@@ -24,10 +24,12 @@ import mysql.connector
 # Initialize connection.
 # Uses st.cache_resource to only run once.
 # @st.cache_resource
-def init_connection():
-    return mysql.connector.connect(**st.secrets["mysql"])
+# def init_connection():
+    # return mysql.connector.connect(**st.secrets["mysql"])
 
-conn = init_connection()
+# conn = init_connection()
+
+conn = st.experimental_connection("mysql", type="streamlit.connections.SQLConnection")
 
 # Perform query.
 # Uses st.cache_data to only rerun when the query changes or after 10 min.
