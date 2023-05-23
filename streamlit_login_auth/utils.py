@@ -51,8 +51,7 @@ def check_usr_role(tel_login: str):
         # general = mycursor.execute("SELECT * FROM general WHERE general_firstname = %s AND general_lastname = %s", (firstname_login, lastname_login))
         # general = session.execute("SELECT * FROM general WHERE general_tel = %s", (tel_login,))
         # text_query = "SELECT * FROM general WHERE general_tel = (:s);"
-        # general = session.execute("SELECT * FROM general WHERE general_tel = (:s);", {"s":tel_login})
-        general = conn.query("select * from general where general_tel = :s", params={"s":tel_login})
+        general = session.execute("SELECT * FROM general WHERE general_tel = (:s);", {"s":tel_login})
         general_existed = session.fetchone()
         # st.write(general_existed)
         session.commit()
