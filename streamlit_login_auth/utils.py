@@ -1,5 +1,6 @@
 import streamlit as st
 import mysql.connector
+from sqlalchemy import text
 
 # def init_connection():
     # return mysql.connector.connect(**st.secrets["mysql"])
@@ -51,7 +52,7 @@ def check_usr_role(tel_login: str):
         # general = mycursor.execute("SELECT * FROM general WHERE general_firstname = %s AND general_lastname = %s", (firstname_login, lastname_login))
         # general = session.execute("SELECT * FROM general WHERE general_tel = %s", (tel_login,))
         # text_query = "SELECT * FROM general WHERE general_tel = (:s);"
-        query = str("SELECT * FROM general WHERE general_tel = (:s);")
+        query = text("SELECT * FROM general WHERE general_tel = (:s);")
         general = session.execute(query, {"s":tel_login})
         general_existed = session.fetchone()
         # st.write(general_existed)
