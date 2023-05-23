@@ -12,6 +12,7 @@ def register_new_usr(firstname_sign_up: str, lastname_sign_up: str, tel_sign_up:
     with conn.session as session:
         if role_sign_up == 'คนทั่วไป':
             session.execute("INSERT INTO general (general_firstname, general_lastname, general_tel, general_password) VALUES (%s, %s, %s, %s)", (firstname_sign_up, lastname_sign_up, tel_sign_up, password_sign_up))
+            # session.execute("INSERT INTO general (general_firstname, general_lastname, general_tel, general_password) VALUES (%s, %s, %s, %s);", (firstname_sign_up, lastname_sign_up, tel_sign_up, password_sign_up))
         else:
             session.execute("INSERT INTO doctor (doctor_firstname, doctor_lastname, doctor_tel, doctor_password) VALUES (%s, %s, %s, %s)", (firstname_sign_up, lastname_sign_up, tel_sign_up, password_sign_up))
         session.commit()
@@ -29,7 +30,7 @@ def check_unique_usr(firstname_sign_up: str, lastname_sign_up: str, role_sign_up
     # mycursor = conn.cursor(buffered=True)
     with conn.session as session:
         if role_sign_up == 'คนทั่วไป':
-            sessoin.execute("SELECT * FROM general WHERE general_firstname = %s AND general_lastname = %s", (firstname_sign_up, lastname_sign_up))
+            sessoin.execute("SELECT * FROM general WHERE general_firstname = %s AND general_lastname = %s;", (firstname_sign_up, lastname_sign_up))
             # mycursor.fetchall()
         else:
             session.execute("SELECT * FROM doctor WHERE doctor_firstname = %s AND doctor_lastname = %s", (firstname_sign_up, lastname_sign_up))
