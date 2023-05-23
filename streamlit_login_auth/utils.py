@@ -30,7 +30,7 @@ def check_unique_usr(firstname_sign_up: str, lastname_sign_up: str, role_sign_up
     # mycursor = conn.cursor(buffered=True)
     with conn.session as session:
         if role_sign_up == 'คนทั่วไป':
-            sessoin.execute("SELECT * FROM general WHERE general_firstname = %s AND general_lastname = %s;", (firstname_sign_up, lastname_sign_up))
+            sessoin.execute("SELECT * FROM general WHERE general_firstname = %s AND general_lastname = %s", (firstname_sign_up, lastname_sign_up))
             # mycursor.fetchall()
         else:
             session.execute("SELECT * FROM doctor WHERE doctor_firstname = %s AND doctor_lastname = %s", (firstname_sign_up, lastname_sign_up))
