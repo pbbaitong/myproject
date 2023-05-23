@@ -29,6 +29,8 @@ import mysql.connector
 
 # conn = init_connection()
 
+st.set_page_config(layout='wide')
+
 conn = st.experimental_connection("mysql", type="streamlit.connections.SQLConnection")
 
 # Perform query.
@@ -44,7 +46,7 @@ def run_query(query):
         cur.execute(query)
         return cur.fetchall()
 
-st.set_page_config(layout='wide')
+# st.set_page_config(layout='wide')
 
 # --- USER AUTHENTICATION ---------------------------------------------------------------------------------------------------
 __login__obj = __login__()
