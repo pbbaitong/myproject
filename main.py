@@ -393,7 +393,7 @@ if LOGGED_IN == True:
                               
                          
                          # --- SAVE TO GENERAL DATABASE ---
-                         general_name = run_query_val("SELECT COUNT(*) FROM general WHERE general_firstname = %s AND general_lastname = %s", (general_firstname, general_lastname))
+                         """general_name = run_query_val("SELECT COUNT(*) FROM general WHERE general_firstname = %s AND general_lastname = %s", (general_firstname, general_lastname))
                          
                          if f'{general_name[0][0]}' == '0':
                               mycursor = conn.cursor()
@@ -423,7 +423,7 @@ if LOGGED_IN == True:
                          else:
                               mycursor.execute("INSERT INTO record (general_id, doctor_id, date, gender, age, weight, height, congenital, fit_test, hb, hct, rbc, mch, mchc, wbc, result_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", 
                                              (general_id, doctor_id, datetime.now(), gender, age, weight, height, str(congenital), fit_result, hb, hct, rbc, mch, mchc, wbc, result_id))
-                         conn.commit()
+                         conn.commit()"""
           
           else:
                doctor_image = Image.open('images/doctor.jpg')
