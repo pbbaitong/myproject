@@ -4,7 +4,6 @@ joblib
 imblearn
 streamlit_cookies_manager
 mysqlclient
-sqlalchemy==1.4.31
-pymysql==1.0.2
+SQLAlchemy
 pyodbc
 plotly
