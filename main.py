@@ -29,7 +29,7 @@ import mysql.connector
 
 # conn = init_connection()
 
-st.set_page_config(layout='wide')
+# st.set_page_config(layout='wide')
 
 conn = st.experimental_connection("mysql", type="streamlit.connections.SQLConnection")
 
